@@ -52,7 +52,7 @@
       app.selectedCities = [];
     }
     app.getForecast(key, label);
-    app.selectedCities.push({ key: key, label: label });
+    app.selectedCities.push({key: key, label: label});
     app.saveSelectedCities();
     app.toggleAddDialog(false);
   });
@@ -335,7 +335,7 @@
   // app.updateForecastCard(initialWeatherForecast);
 
   // TODO add startup code here
-  /************************************************************************
+/************************************************************************
    *
    * Código necesario para iniciar la app
    *
@@ -360,14 +360,9 @@
      */
     app.updateForecastCard(initialWeatherForecast);
     app.selectedCities = [
-      { key: initialWeatherForecast.key, label: initialWeatherForecast.label }
+      {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
     ];
     app.saveSelectedCities();
   }
   // TODO add service worker code here
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js').then(function() {
-      console.log('Service Worker Registered');
-    });
-  }
 })();
